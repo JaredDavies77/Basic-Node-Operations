@@ -1,0 +1,33 @@
+Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
+
+- Sort takes all the lines in the document or input and puts them in alphabetical order. In commands.js it based everything off of the first letter of each line and so on to determine the alphabetical order.
+
+- Wc takes the entire document or input and tells you how many lines, words, and characters. The output was three numbers. Ex:  40     113    1094
+
+- Uniq first sorts all the lines of the document or input and then removes all the duplicate lines so that only unique lines in the file are left in the output. 
+
+
+Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the specific data was outputted.
+
+- I did uniq commands.js | wc and the output was exactly the same as wc commands.js. This tells me that all my lines in commands.js are unique. 
+
+
+let arr = 'My name is Jared Davies!';
+
+
+function reverseString(inputString) {
+  var split = inputString.split(' '); 
+  var reverse = [];
+    for (let i=split.length-1; i>=0; i--){
+      var word = split[i];
+      for (let j=0; j<word.length; j++){
+       reverse.unshift(word[j]);
+      }
+      reverse.unshift(' ');
+    }
+  reverse.shift();
+  console.log(reverse.join(''));
+}
+  
+
+reverseString(arr);
